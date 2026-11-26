@@ -3,15 +3,57 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0;url=https://script.google.com/macros/s/AKfycbz3dB704ScJsJMzeOJ0owV9m6m3PxNh6XgnN5R4d-FGkHLBKhEycVuuPYQEzCXYlLQ0fQ/exec">
-  <title>Membuka Inventaris SMK Informatika...</title>
-  <link rel="canonical" href="https://script.google.com/macros/s/AKfycbz3dB704ScJsJMzeOJ0owV9m6m3PxNh6XgnN5R4d-FGkHLBKhEycVuuPYQEzCXYlLQ0fQ/exec">
-  <script>
-    window.location.replace("https://script.google.com/macros/s/AKfycbz3dB704ScJsJMzeOJ0owV9m6m3PxNh6XgnN5R4d-FGkHLBKhEycVuuPYQEzCXYlLQ0fQ/exec");
-  </script>
+  <meta name="theme-color" content="#ffffff">
+  <title>Inventaris SMK Informatika</title>
+  <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/smkalirsyadinventaris/favicon-inventaris/main/64x64.png">
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #f8fafc;
+    }
+    .app-frame {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      border: 0;
+      background: #fff;
+    }
+    .loading {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      color: #334155;
+      font: 14px/1.5 Arial, sans-serif;
+      background: #f8fafc;
+      text-align: center;
+      pointer-events: none;
+    }
+  </style>
 </head>
 <body>
-  <p>Membuka aplikasi Inventaris SMK Informatika...</p>
-  <p>Jika tidak terbuka otomatis, <a href="https://script.google.com/macros/s/AKfycbz3dB704ScJsJMzeOJ0owV9m6m3PxNh6XgnN5R4d-FGkHLBKhEycVuuPYQEzCXYlLQ0fQ/exec">klik di sini</a>.</p>
+  <div class="loading" id="loading">Memuat Inventaris SMK Informatika...</div>
+  <iframe
+    class="app-frame"
+    src="https://script.google.com/macros/s/AKfycbz3dB704ScJsJMzeOJ0owV9m6m3PxNh6XgnN5R4d-FGkHLBKhEycVuuPYQEzCXYlLQ0fQ/exec"
+    title="Inventaris SMK Informatika"
+    allow="clipboard-read; clipboard-write"
+    allowfullscreen>
+  </iframe>
+  <script>
+    const frame = document.querySelector('.app-frame');
+    frame.addEventListener('load', () => {
+      const loading = document.getElementById('loading');
+      if (loading) loading.remove();
+    });
+  </script>
 </body>
 </html>
